@@ -98,16 +98,23 @@ input[type=checkbox]:checked ~ .card__inner {
     border-radius: var(--pad);
 }
 
+.corner-btns-wrapper {
+    height: 0;
+    position: relative;
+}
 .corner-btns {
     position: absolute;
-    bottom: 62px;
-    right: 4px;
+    /*bottom: 62px;*/
+    /*right: 4px;*/
+
+    top: calc(var(--pad) * -3.5);
+    right: calc(var(--pad) * 3.5);
 }
 
 .corner-btn {
     display: flex;
-    height: 50px;
-    width: 50px;
+    height: calc(var(--pad) * 7);
+    width: calc(var(--pad) * 7);
     border-radius: 50%;
     border: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000' xml:space='preserve'%3E%3Cg style='fill:%23fff'%3E%3Cpath d='M500 10v392l196-196L500 10z'/%3E%3Cpath d='M500 990C271.3 990 85.1 803.8 85.1 575.1S271.3 160.2 500 160.2v91.5c-176.4 0-323.4 143.7-323.4 323.4S320.3 898.5 500 898.5s323.4-143.7 323.4-323.4h91.5C914.9 803.8 728.7 990 500 990z'/%3E%3C/g%3E%3C/svg%3E");
@@ -118,6 +125,7 @@ input[type=checkbox]:checked ~ .card__inner {
     cursor: pointer;
     opacity: .7;
     box-shadow: 0 2px 4px #00000055;
+    font-size: 0;
 }
 
 .corner-btn:hover {
