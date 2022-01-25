@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const initCurrentState = () => {
-    const selectedItems = JSON.parse(localStorage.getItem(STORAGE_SELECTED_ID) || '') || [];
+    const selectedItems = JSON.parse(localStorage.getItem(STORAGE_SELECTED_ID) || '[]') || [];
 
     if (!Array.isArray(selectedItems) || !selectedItems.length) return;
 
